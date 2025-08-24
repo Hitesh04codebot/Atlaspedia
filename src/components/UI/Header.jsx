@@ -1,4 +1,3 @@
-import React, { use } from "react";
 import { Link } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
@@ -15,29 +14,29 @@ function Header() {
           to="/"
           className="text-3xl text-white font-bold hover:scale-110 transform transition duration-300"
         >
-          Atlaspedia
+          <span>Atlas</span><span className="text-blue-600">Pedia</span>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex justify-center items-center gap-8">
           <NavLink
             to="/"
-            className={({ isActive }) =>`text-white font-bold hover:scale-108 transform transition duration-300 ${ isActive  ? "underline underline-offset-7 decoration-red-500" : "" }`}>Home
+            className={({ isActive }) =>`text-white font-bold hover:scale-108 transform transition duration-300 ${ isActive  ? "underline underline-offset-7 decoration-blue-600" : "" }`}>Home
           </NavLink>
 
           <NavLink
             to="/country"
-            className={({ isActive }) =>`text-white font-bold hover:scale-108 transform transition duration-300 ${ isActive  ? "underline underline-offset-7 decoration-red-500" : "" }`}>Country
+            className={({ isActive }) =>`text-white font-bold hover:scale-108 transform transition duration-300 ${ isActive  ? "underline underline-offset-7 decoration-blue-600" : "" }`}>Country
           </NavLink>
 
           <NavLink
             to="/about"
-            className={({ isActive }) =>`text-white font-bold hover:scale-108 transform transition duration-300 ${ isActive  ? "underline underline-offset-7 decoration-red-500" : "" }`}>About
+            className={({ isActive }) =>`text-white font-bold hover:scale-108 transform transition duration-300 ${ isActive  ? "underline underline-offset-7 decoration-blue-600" : "" }`}>About
           </NavLink>
 
           <NavLink
             to="/contact"
-            className={({ isActive }) =>`text-white font-bold hover:scale-108 transform transition duration-300 ${ isActive  ? "underline underline-offset-7 decoration-red-500" : "" }`}>Contact
+            className={({ isActive }) =>`text-white font-bold hover:scale-108 transform transition duration-300 ${ isActive  ? "underline underline-offset-7 decoration-blue-600" : "" }`}>Contact
           </NavLink>
         </div>
 
