@@ -2,7 +2,7 @@ import "./App.css";
 import { FaReact } from "react-icons/fa";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Applayout from './components/AppLayout/Applayout'
-import Home from "./pages/Home";
+import Home from "../src/components/UI/Home";
 import About from "./pages/About";
 import Country from "./pages/Country";
 import Contact from "./pages/Contact";

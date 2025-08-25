@@ -1,8 +1,10 @@
 import React from "react";
 import world from "../assets/images/world.png";
+import Lottie from "lottie-react";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "motion/react"
-function Home() {
+import worldAnimation from "../assets/lottie/worldAnimation.json"
+function Hero() {
   return (
     <div className="flex justify-between items-center mx-10 max-md:flex-col max-md:mx-4">
       <div className="box-border mt-3 flex flex-col justify-center items-start w-1/2 p-20 max-md:w-full max-md:p-2 ">
@@ -27,19 +29,13 @@ function Home() {
         Get Started <FiArrowRight className="font-semibold" />
       </motion.button>
       </div>
-
       <div className="w-1/2 flex justify-center items-center max-md:w-full max-md:mt-6">
-        <motion.img
-          src={world}
-          alt="WorldMonumentImage"
-          className="object-cover w-150 h-100"
-          initial={{ y: -100, opacity: 0 }}    
-          animate={{ y: 0, opacity: 1 }}     
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        />
+        <motion.div>
+          <Lottie animationData={worldAnimation} loop={true} className="w-full h-auto" />;
+        </motion.div>
       </div>
-    </div>
+    </div> 
   );
 }
 
-export default Home;
+export default Hero;

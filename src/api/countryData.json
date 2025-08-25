@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Canada",
+    "capital": "Ottawa",
+    "population": 38000000,
+    "interestingFact": "In parts of Canada, milk is still sold in plastic bags instead of cartons or bottles."
+  },
+  {
+    "id": 2,
+    "name": "Japan",
+    "capital": "Tokyo",
+    "population": 125800000,
+    "interestingFact": "In Japan, there are vending machines that sell everything from umbrellas to fresh eggs and even ties."
+  },
+  {
+    "id": 3,
+    "name": "India",
+    "capital": "New Delhi",
+    "population": 1393000000,
+    "interestingFact": "India has a floating post office located on Dal Lake in Srinagar, Kashmir."
+  },
+  {
+    "id": 4,
+    "name": "Brazil",
+    "capital": "Brasília",
+    "population": 213000000,
+    "interestingFact": "The city of Rio de Janeiro was once the capital of Portugal, making it the only European capital outside Europe."
+  },
+  {
+    "id": 5,
+    "name": "Australia",
+    "capital": "Canberra",
+    "population": 26000000,
+    "interestingFact": "Australia is home to pink lakes like Lake Hillier, whose color remains even if the water is bottled."
+  },
+  {
+    "id": 6,
+    "name": "Egypt",
+    "capital": "Cairo",
+    "population": 104000000,
+    "interestingFact": "Ancient Egyptians invented the first known pregnancy test using wheat and barley seeds."
+  },
+  {
+    "id": 7,
+    "name": "France",
+    "capital": "Paris",
+    "population": 67000000,
+    "interestingFact": "There’s only one stop sign in the entire city of Paris."
+  },
+  {
+    "id": 8,
+    "name": "South Africa",
+    "capital": "Pretoria",
+    "population": 60000000,
+    "interestingFact": "South Africa is the only country in the world to have hosted the FIFA World Cup, Rugby World Cup, and Cricket World Cup."
+  },
+  {
+    "id": 9,
+    "name": "Italy",
+    "capital": "Rome",
+    "population": 59000000,
+    "interestingFact": "In Venice, there are more gondolas now for tourists than there ever were for local transport in history."
+  }
+]
