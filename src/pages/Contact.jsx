@@ -32,14 +32,14 @@ function Contact() {
     <div className="grid place-items-center min-h-screen">
       <form
         onSubmit={onSubmit}
-        className="flex flex-col w-[700px] justify-center align-center min-h-screen p-10"
+        className="flex flex-col w-full sm:w-[500px] md:w-[600px] lg:w-[700px] justify-center align-center min-h-screen p-10"
       >
         <h1 className="text-white font-semibold text-4xl text-center">
           Contact Us
         </h1>
         <label
           htmlFor="name"
-          className="text-white font-semibold text-xl ml-10 mt-10"
+          className="text-white font-semibold text-xl mt-10"
         >
           Name:
         </label>
@@ -48,13 +48,13 @@ function Contact() {
           name="Name"
           id="name"
           placeholder="Enter your name"
-          className="ml-10 mt-2 p-2 placeholder-white rounded-lg border  border-white w-full text-white"
-          autocomplete="off"
+          className="mt-2 p-2 placeholder-white rounded-lg border  border-white w-full text-white"
+          autoComplete="off"
         />
         <br />
         <label
           htmlFor="email"
-          className="text-white font-semibold text-xl ml-10 mt-4"
+          className="text-white font-semibold text-xl mt-4"
         >
           Email:
         </label>
@@ -63,13 +63,13 @@ function Contact() {
           name="Email"
           id="email"
           placeholder="Enter your email"
-          className="ml-10 mt-2 p-2 placeholder-white rounded-lg border  border-white w-full text-white"
-          autocomplete="off"
+          className=" mt-2 p-2 placeholder-white rounded-lg border  border-white w-full text-white"
+          autoComplete="off"
         />
         <br />
         <label
           htmlFor="message"
-          className="text-white font-semibold text-xl ml-10 mt-4"
+          className="text-white font-semibold text-xl mt-4"
         >
           Message:
         </label>
@@ -78,11 +78,11 @@ function Contact() {
           name="Message"
           rows="4"
           placeholder="Enter your message"
-          className="ml-10 mt-2 p-2 placeholder-white rounded-lg border border-white w-full text-white"
-          autocomplete="off"
+          className="mt-2 p-2 placeholder-white rounded-lg border border-white w-full text-white"
+          autoComplete="off"
         ></textarea>
         <br />
-        <button type="submit" className="bg-blue-800 text-white w-full font-semibold text-xl ml-10 mt-4 p-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
+        <button type="submit" className="bg-blue-800 text-white w-full font-semibold text-xl mt-4 p-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
           Submit
         </button>
       </form>
