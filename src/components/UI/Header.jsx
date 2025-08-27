@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-zinc-800">
+    <nav className="bg-zinc-900">
       <div className="flex items-center justify-between h-16 px-10 max-sm:px-4">
         {/* Logo */}
         <Link
