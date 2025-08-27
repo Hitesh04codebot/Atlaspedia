@@ -61,12 +61,12 @@ function Footer() {
       </div>
 
       <div className="w-full flex justify-between items-center bg-zinc-900 p-3 max-md:flex-col max-md:gap-4 max-sm:flex-col max-sm:gap-4">
-        <p className="text-white bg-zinc-900">
+        <p className="text-zinc-400 bg-zinc-900">
           &copy; {new Date().getFullYear()} AtlasPedia. All rights reserved.
         </p>
-        <p className="text-white">Made with &nbsp;<FaHeart className="text-red-500 text-xl inline"/>&nbsp; by Hitesh Kandari</p>
+        <p className="text-zinc-400">Made with &nbsp;<FaHeart className="text-red-500 text-xl inline"/>&nbsp; by <span className="text-blue-900 font-medium">Hitesh Kandari</span></p>
         <ul className="flex items-center gap-4">
-          <li className="text-white">Follow me on:</li>
+          <li className="text-zinc-400">Follow me on:</li>
           <li>
             <a
               href="https://www.linkedin.com/in/hiteshkandari2004/"
