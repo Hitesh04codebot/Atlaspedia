@@ -27,7 +27,7 @@ function Country() {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <Lottie animationData={loadinggif} loop={true} className="w-32 h-32" />;
+        <Lottie animationData={loadinggif} loop={true} className=" text-6xl" />;
       </div>
     );
   }
