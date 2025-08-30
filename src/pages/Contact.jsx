@@ -1,5 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
+import { motion } from "motion/react";
 
 function Contact() {
   const onSubmit = async (event) => {
@@ -34,57 +35,86 @@ function Contact() {
         onSubmit={onSubmit}
         className="flex flex-col w-full sm:w-[500px] md:w-[600px] lg:w-[700px] justify-center align-center min-h-screen p-10"
       >
-        <h1 className="text-white font-semibold text-4xl text-center">
+        <motion.h1 
+          initial={{ y: -50, opacity: 0 }} // starts from left
+          animate={{ y: 0, opacity: 1 }} // moves to normal position
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-white font-semibold text-4xl text-center">
           Contact Us
-        </h1>
-        <label
+        </motion.h1>
+        <motion.label
+          initial={{ x: -100, opacity: 0 }} // starts from left
+          animate={{ x: 0, opacity: 1 }} // moves to normal position
+          transition={{ duration: 0.8, ease: "easeOut" }}
           htmlFor="name"
           className="text-white font-semibold text-xl mt-10"
         >
           Name:
-        </label>
-        <input
+        </motion.label>
+        <motion.input
+          initial={{ x: -100, opacity: 0 }} // starts from left
+          animate={{ x: 0, opacity: 1 }} // moves to normal position
+          transition={{ duration: 1.7, ease: "easeOut" }}
           type="text"
           name="Name"
           id="name"
           placeholder="Enter your name"
           className="mt-2 p-2 placeholder-white rounded-lg border  border-white w-full text-white"
           autoComplete="off"
+          required
         />
         <br />
-        <label
+        <motion.label
+          initial={{ x: -100, opacity: 0 }} // starts from left
+          animate={{ x: 0, opacity: 1 }} // moves to normal position
+          transition={{ duration: 0.8, ease: "easeOut" }}
           htmlFor="email"
           className="text-white font-semibold text-xl mt-4"
         >
           Email:
-        </label>
-        <input
+        </motion.label>
+        <motion.input
+          initial={{ x: -100, opacity: 0 }} // starts from left
+          animate={{ x: 0, opacity: 1 }} // moves to normal position
+          transition={{ duration: 1.7, ease: "easeOut" }}
           type="email"
           name="Email"
           id="email"
           placeholder="Enter your email"
           className=" mt-2 p-2 placeholder-white rounded-lg border  border-white w-full text-white"
           autoComplete="off"
+          required
         />
         <br />
-        <label
+        <motion.label
+          initial={{ x: -100, opacity: 0 }} // starts from left
+          animate={{ x: 0, opacity: 1 }} // moves to normal position
+          transition={{ duration: 0.8, ease: "easeOut" }}
           htmlFor="message"
           className="text-white font-semibold text-xl mt-4"
         >
           Message:
-        </label>
-        <textarea
+        </motion.label>
+        <motion.textarea
+          initial={{ x: -100, opacity: 0 }} // starts from left
+          animate={{ x: 0, opacity: 1 }} // moves to normal position
+          transition={{ duration: 1.7, ease: "easeOut" }}
           id="message"
           name="Message"
           rows="4"
           placeholder="Enter your message"
           className="mt-2 p-2 placeholder-white rounded-lg border border-white w-full text-white"
           autoComplete="off"
-        ></textarea>
+          required
+        ></motion.textarea>
         <br />
-        <button type="submit" className="bg-blue-800 text-white w-full font-semibold text-xl mt-4 p-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
+        <motion.button 
+        initial={{ x: 0, opacity: 0 }} // starts from left
+          animate={{ x: 0, opacity: 1 }} // moves to normal position
+          transition={{ duration: 1.7, ease: "easeOut" }}
+        type="submit" className="bg-blue-800 text-white w-full font-semibold text-xl mt-4 p-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
           Submit
-        </button>
+        </motion.button>
       </form>
     </div>
   );

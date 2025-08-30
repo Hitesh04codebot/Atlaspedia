@@ -15,9 +15,7 @@ const CountryDetails = () => {
       try {
         console.log("Fetching country:", decodeURIComponent(id));
         const response = await axios.get(
-          `https://restcountries.com/v3.1/name/${decodeURIComponent(
-            id
-          )}?fullText=true`
+          `https://restcountries.com/v3.1/name/${decodeURIComponent(id)}?fullText=true`
         );
         setCountry(response.data);
       } catch (error) {
@@ -31,13 +29,13 @@ const CountryDetails = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <Lottie animationData={loadinggif} loop={true} className=" text-4xl" />;
+        <Lottie animationData={loadinggif} loop={true} className=" text-3xl" />;
       </div>
     );
   }
 
   return (
-    <div className="w-screen min-h-screen bg-zinc-900 flex justify-center items-center">
+    <div className="w-full min-h-screen bg-zinc-900 flex justify-center items-center">
       {country &&
         country.map((c, index) => (
           <div
@@ -50,17 +48,16 @@ const CountryDetails = () => {
               initial={{ x: -200, opacity: 0 }} // starts from left
               animate={{ x: 0, opacity: 1 }} // moves to normal position
               transition={{ duration: 0.8, ease: "easeOut" }} // smooth effect
-              className="flex w-2/3 flex-row justify-start max-lg:w-full"
+              className="flex w-1/2 flex-row justify-start max-lg:w-full"
             >
               <img
                 src={c.flags.svg}
                 alt={c.flags.alt}
-                className="w-full max-w-[700px] h-auto object-cover rounded border border-zinc-700"
-              />
+                className="w-full max-w-[700px] h-auto object-cover rounded-lg shadow-[0_0_30px_white]"/>
             </motion.div>
 
             {/* Right - Details */}
-            <div className="flex w-1/3 flex-col justify-evenly items-start gap-7 text-white max-lg:w-full ">
+            <div className="flex w-1/2 flex-col justify-evenly items-start gap-7 text-white max-lg:w-full ">
               <motion.h1 
               initial={{ x: 200, opacity: 0 }} // starts from left
               animate={{ x: 0, opacity: 1 }} // moves to normal position
@@ -119,8 +116,8 @@ const CountryDetails = () => {
               >
                 <span className="font-semibold">Currencies:</span>{" "}
                 {c.currencies
-                  ? Object.values(c.currencies)
-                      .map((cur) => cur.name)
+                  ? Object.keys(c.currencies)
+                      .map((cur) => c.currencies[cur].name)
                       .join(", ")
                   : "N/A"}
               </motion.p>
