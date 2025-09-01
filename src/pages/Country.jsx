@@ -14,20 +14,23 @@ function Country() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await axios.get(
-          "https://restcountries.com/v3.1/all?fields=name,population,region,flags,capital"
-        );
-        setCountries(response.data);
-      } catch (error) {
-        console.error("Error fetching countries:", error);
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, []);
+useEffect(() => {
+  const fetchCountries = async () => {
+    try {
+      const response = await axios.get(
+        "https://restcountries.com/v3.1/all?fields=name,population,region,flags,capital"
+      );
+      setCountries(response.data);
+    } catch (error) {
+      console.error("Error fetching countries:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchCountries();
+}, []);
+
 
   if (loading) {
     return (

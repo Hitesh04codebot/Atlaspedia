@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "motion/react"
 import worldAnimation from "../assets/lottie/worldAnimation.json"
+import { NavLink } from "react-router-dom";
 function Hero() {
   return (
     <div className="flex justify-between items-center mx-10 max-md:flex-col max-md:mx-4">
@@ -21,13 +22,14 @@ function Hero() {
           Discover the history, culture and beauty of every nation. Sort, filter
           and search through countries to find details you need.
         </motion.p>
+      <NavLink to ="/country">  
         <motion.button 
             className="bg-blue-600 text-white mt-3 px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold flex items-center gap-2 "
             initial={{ x: 0, opacity: 0 }}   // stays in the same spot
             animate={{ x: 0, opacity: 1 }}      
             transition={{ duration: 3, ease: "easeOut" }}>
         Get Started <FiArrowRight className="font-semibold" />
-      </motion.button>
+      </motion.button></NavLink>
       </div>
       <div className="w-1/2 flex justify-center items-center max-md:w-full max-md:mt-6">
         <motion.div>
